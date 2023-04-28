@@ -1,0 +1,51 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    height: 10rem;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 1rem;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #0070f3;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0060c0;
+  }
+  

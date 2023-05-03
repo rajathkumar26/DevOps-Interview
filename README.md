@@ -19,8 +19,13 @@ The Backend is created using [ExpressJS](https://expressjs.com) and [Serverless-
 You can start by installing dependencies for Backend
 
 ```bash
-cd Backend
+cd backend
 npm install
+```
+Build the backend
+
+```
+npm run build
 ```
 
 The backend runs on serverless so will need to add serverless code for running.
@@ -32,8 +37,14 @@ The Frontend is created using [ReactJs](https://react.dev) and [NextJS](https://
 You can start by installing dependencies for Frontend
 
 ```bash
-cd Frontend
+cd frontend
 npm install
+```
+
+Build the frontend
+
+```
+npm run build
 ```
 
 You can run the Frontend locally using

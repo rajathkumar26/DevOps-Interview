@@ -3,24 +3,45 @@ import { v4 as uuid } from 'uuid';
 
 const router = express.Router();
 
-const posts = [];
+let posts = [];
 
 router.get('/', (req, res) => {
-  res.json(posts);
+  const response = {
+    statusCode: 200,
+    body: JSON.stringify(posts),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  res.send(response);
 });
 
 router.post('/', (req, res) => {
   const { title, content } = req.body;
 
   if (!title || !content) {
-    res.status(400).json({ error: 'Title and content are required' });
+    const response = {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'Title and content are required' }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    res.send(response);
     return;
   }
 
   const post = { id: uuid(), title, content };
   posts.push(post);
 
-  res.status(201).json(post);
+  const response = {
+    statusCode: 201,
+    body: JSON.stringify(post),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  res.send(response);
 });
 
 export default router;
